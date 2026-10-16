@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Training & Quiz | CyberGuard SME</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/training.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="side-logo">
+            🛡️ CyberGuard
+        </div>
+
+        <a href="dashboard.html">
+            📊 Dashboard
+        </a>
+
+        <a href="assessment.html">
+            📝 Assessment
+        </a>
+
+        <a href="phishing.html">
+            🔍 Phishing Checker
+        </a>
+
+        <a href="training.html" class="active">
+            🎓 Training & Quiz
+        </a>
+
+        <a href="recommendations.html">
+            💡 Recommendations
+        </a>
+
+        <a href="alerts.html">
+            🔔 Alerts
+        </a>
+
+        <a href="reports.html">
+            📈 Reports
+        </a>
+
+        <a href="profile.html">
+            👤 Profile
+        </a>
+
+        <button onclick="logout()" class="logout">
+            🚪 Logout
+        </button>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main-content training-main">
+
+
+        <!-- HERO -->
+
+        <section class="training-hero">
+
+            <div>
+
+                <span class="training-tag">
+                    🎓 SECURITY AWARENESS
+                </span>
+
+                <h1>
+                    Learn. Practice.
+                    <span>Stay Secure.</span>
+                </h1>
+
+                <p>
+                    Improve your cybersecurity knowledge through
+                    short lessons, interactive quizzes and challenges.
+                </p>
+
+            </div>
+
+
+            <div class="hero-learning">
+
+                <div class="floating-icon icon-one">
+                    🔐
+                </div>
+
+                <div class="learning-circle">
+                    🎓
+                </div>
+
+                <div class="floating-icon icon-two">
+                    🏆
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- STATS -->
+
+        <section class="learning-stats">
+
+            <div class="learning-stat">
+
+                <div class="stat-icon blue">
+                    📚
+                </div>
+
+                <div>
+
+                    <span>Lessons</span>
+
+                    <strong>6</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="learning-stat">
+
+                <div class="stat-icon purple">
+                    🧠
+                </div>
+
+                <div>
+
+                    <span>Quiz Questions</span>
+
+                    <strong>30</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="learning-stat">
+
+                <div class="stat-icon green">
+                    🏆
+                </div>
+
+                <div>
+
+                    <span>Badges Earned</span>
+
+                    <strong id="badgeCount">0</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="learning-stat">
+
+                <div class="stat-icon orange">
+                    🔥
+                </div>
+
+                <div>
+
+                    <span>Current Streak</span>
+
+                    <strong id="streakCount">1 Day</strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LESSONS -->
+
+        <section class="lessons-section">
+
+            <div class="section-title">
+
+                <div>
+
+                    <span>LEARNING CENTER</span>
+
+                    <h2>Cybersecurity Topics</h2>
+
+                </div>
+
+                <p>
+                    Choose a topic and test your knowledge.
+                </p>
+
+            </div>
+
+
+            <div class="lesson-grid">
+
+
+                <!-- PHISHING -->
+
+                <div class="lesson-card">
+
+                    <div class="lesson-top">
+
+                        <div class="lesson-icon phishing-icon">
+                            🎣
+                        </div>
+
+                        <span class="lesson-level">
+                            Beginner
+                        </span>
+
+                    </div>
+
+                    <h3>Phishing Awareness</h3>
+
+                    <p>
+                        Learn how to identify suspicious emails,
+                        links and online scams.
+                    </p>
+
+                    <div class="lesson-meta">
+                        <span>⏱ 5 min</span>
+                        <span>❓ 5 Questions</span>
+                    </div>
+
+                    <button
+                        onclick="startQuiz('phishing')"
+                        class="lesson-btn">
+
+                        Start Learning →
+
+                    </button>
+
+                </div>
+
+
+                <!-- RANSOMWARE -->
+
+                <div class="lesson-card">
+
+                    <div class="lesson-top">
+
+                        <div class="lesson-icon ransomware-icon">
+                            🔒
+                        </div>
+
+                        <span class="lesson-level">
+                            Beginner
+                        </span>
+
+                    </div>
+
+                    <h3>Ransomware</h3>
+
+                    <p>
+                        Understand ransomware attacks and
+                        how organizations can stay protected.
+                    </p>
+
+                    <div class="lesson-meta">
+                        <span>⏱ 5 min</span>
+                        <span>❓ 5 Questions</span>
+                    </div>
+
+                    <button
+                        onclick="startQuiz('ransomware')"
+                        class="lesson-btn">
+
+                        Start Learning →
+
+                    </button>
+
+                </div>
+
+
+                <!-- MALWARE -->
+
+                <div class="lesson-card">
+
+                    <div class="lesson-top">
+
+                        <div class="lesson-icon malware-icon">
+                            🦠
+                        </div>
+
+                        <span class="lesson-level">
+                            Beginner
+                        </span>
+
+                    </div>
+
+                    <h3>Malware Protection</h3>
+
+                    <p>
+                        Learn common malware types and basic
+                        protection practices.
+                    </p>
+
+                    <div class="lesson-meta">
+                        <span>⏱ 5 min</span>
+                        <span>❓ 5 Questions</span>
+                    </div>
+
+                    <button
+                        onclick="startQuiz('malware')"
+                        class="lesson-btn">
+
+                        Start Learning →
+
+                    </button>
+
+                </div>
+
+
+                <!-- BEC -->
+
+                <div class="lesson-card">
+
+                    <div class="lesson-top">
+
+                        <div class="lesson-icon bec-icon">
+                            💼
+                        </div>
+
+                        <span class="lesson-level">
+                            Intermediate
+                        </span>
+
+                    </div>
+
+                    <h3>Business Email Compromise</h3>
+
+                    <p>
+                        Understand fraudulent business emails
+                        and impersonation attacks.
+                    </p>
+
+                    <div class="lesson-meta">
+                        <span>⏱ 5 min</span>
+                        <span>❓ 5 Questions</span>
+                    </div>
+
+                    <button
+                        onclick="startQuiz('bec')"
+                        class="lesson-btn">
+
+                        Start Learning →
+
+                    </button>
+
+                </div>
+
+
+                <!-- INSIDER -->
+
+                <div class="lesson-card">
+
+                    <div class="lesson-top">
+
+                        <div class="lesson-icon insider-icon">
+                            👤
+                        </div>
+
+                        <span class="lesson-level">
+                            Intermediate
+                        </span>
+
+                    </div>
+
+                    <h3>Insider Threats</h3>
+
+                    <p>
+                        Learn how internal risks can affect
+                        business information and systems.
+                    </p>
+
+                    <div class="lesson-meta">
+                        <span>⏱ 5 min</span>
+                        <span>❓ 5 Questions</span>
+                    </div>
+
+                    <button
+                        onclick="startQuiz('insider')"
+                        class="lesson-btn">
+
+                        Start Learning →
+
+                    </button>
+
+                </div>
+
+
+                <!-- BACKUP -->
+
+                <div class="lesson-card">
+
+                    <div class="lesson-top">
+
+                        <div class="lesson-icon backup-icon">
+                            💾
+                        </div>
+
+                        <span class="lesson-level">
+                            Beginner
+                        </span>
+
+                    </div>
+
+                    <h3>Backup & Recovery</h3>
+
+                    <p>
+                        Learn why secure backups are important
+                        for business continuity.
+                    </p>
+
+                    <div class="lesson-meta">
+                        <span>⏱ 5 min</span>
+                        <span>❓ 5 Questions</span>
+                    </div>
+
+                    <button
+                        onclick="startQuiz('backup')"
+                        class="lesson-btn">
+
+                        Start Learning →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUIZ MODAL -->
+
+        <div id="quizModal" class="quiz-modal hidden">
+
+            <div class="quiz-box">
+
+
+                <div class="quiz-header">
+
+                    <div>
+
+                        <span id="quizCategory">
+                            PHISHING AWARENESS
+                        </span>
+
+                        <h2 id="quizTitle">
+                            Security Quiz
+                        </h2>
+
+                    </div>
+
+                    <button
+                        onclick="closeQuiz()"
+                        class="close-btn">
+
+                        ✕
+
+                    </button>
+
+                </div>
+
+
+                <!-- PROGRESS -->
+
+                <div class="quiz-progress">
+
+                    <div class="quiz-progress-info">
+
+                        <span>
+                            Question
+                            <strong id="quizNumber">
+                                1
+                            </strong>
+                            / 5
+                        </span>
+
+                        <span id="quizPercent">
+                            20%
+                        </span>
+
+                    </div>
+
+                    <div class="quiz-progress-bar">
+
+                        <div
+                            id="quizProgressFill">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUESTION -->
+
+                <div class="quiz-question">
+
+                    <span id="questionIcon">
+                        🧠
+                    </span>
+
+                    <h3 id="quizQuestion">
+                        Question goes here
+                    </h3>
+
+                </div>
+
+
+                <!-- OPTIONS -->
+
+                <div
+                    id="quizOptions"
+                    class="quiz-options">
+
+                </div>
+
+
+                <!-- FEEDBACK -->
+
+                <div
+                    id="quizFeedback"
+                    class="quiz-feedback hidden">
+
+                </div>
+
+
+                <!-- NEXT -->
+
+                <button
+                    id="nextQuizBtn"
+                    class="next-question-btn"
+                    onclick="nextQuestion()">
+
+                    Select an Answer
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- COMPLETION -->
+
+        <div
+            id="completionModal"
+            class="completion-modal hidden">
+
+            <div class="completion-card">
+
+                <div class="confetti">
+                    🎉
+                </div>
+
+                <span>
+                    QUIZ COMPLETED
+                </span>
+
+                <h2>
+                    Great Work!
+                </h2>
+
+                <div class="final-score">
+
+                    <strong id="finalScore">
+                        0%
+                    </strong>
+
+                    <small>
+                        Your Score
+                    </small>
+
+                </div>
+
+                <div
+                    id="earnedBadge"
+                    class="earned-badge">
+
+                    🏆 Security Starter
+
+                </div>
+
+                <p id="completionMessage">
+                    Keep learning and improving your
+                    cybersecurity awareness.
+                </p>
+
+                <button
+                    onclick="closeCompletion()"
+                    class="completion-btn">
+
+                    Continue Learning
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+<script src="../js/api.js"></script>
+<script src="../js/training.js"></script>
+
+
+<script>
+
+function logout() {
+
+    localStorage.removeItem("isLoggedIn");
+
+    window.location.href = "login.html";
+
+}
+
+</script>
+
+</body>
+</html>

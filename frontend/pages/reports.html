@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reports | CyberGuard SME</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/reports.css">
+</head>
+
+<body>
+
+<div class="reports-page">
+
+    <!-- HEADER -->
+    <header class="reports-header">
+
+        <div class="reports-logo">
+            🛡️ CyberGuard SME
+        </div>
+
+        <div class="header-actions">
+            <button onclick="printReport()" class="print-btn">
+                🖨️ Print Report
+            </button>
+
+            <a href="dashboard.html">
+                ← Dashboard
+            </a>
+        </div>
+
+    </header>
+
+
+    <main class="reports-container">
+
+        <!-- TITLE -->
+        <section class="reports-title">
+
+            <span class="reports-badge">
+                📈 Security Analytics
+            </span>
+
+            <h1>Cybersecurity Report</h1>
+
+            <p>
+                Review your organization's cybersecurity performance,
+                risks and improvement areas.
+            </p>
+
+        </section>
+
+
+        <!-- OVERALL SCORE -->
+        <section class="overall-report">
+
+            <div class="overall-score">
+
+                <div class="score-circle">
+                    <strong id="overallScore">78%</strong>
+                    <span>Cyber Health</span>
+                </div>
+
+            </div>
+
+            <div class="overall-info">
+
+                <span class="status-badge">
+                    GOOD SECURITY POSTURE
+                </span>
+
+                <h2>Your security posture is good</h2>
+
+                <p>
+                    Continue improving employee awareness,
+                    phishing protection and security practices
+                    to achieve a stronger cybersecurity posture.
+                </p>
+
+                <div class="report-date">
+                    📅 Report generated: <span id="reportDate"></span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SCORE CARDS -->
+        <section class="score-grid">
+
+            <div class="score-card">
+
+                <div class="score-icon">📊</div>
+
+                <span>Assessment</span>
+
+                <strong>82%</strong>
+
+                <small>Good</small>
+
+                <div class="mini-progress">
+                    <div style="width:82%"></div>
+                </div>
+
+            </div>
+
+
+            <div class="score-card">
+
+                <div class="score-icon">🔍</div>
+
+                <span>Phishing Protection</span>
+
+                <strong>75%</strong>
+
+                <small>Needs Improvement</small>
+
+                <div class="mini-progress">
+                    <div style="width:75%"></div>
+                </div>
+
+            </div>
+
+
+            <div class="score-card">
+
+                <div class="score-icon">🎓</div>
+
+                <span>Training & Quiz</span>
+
+                <strong>77%</strong>
+
+                <small>Good</small>
+
+                <div class="mini-progress">
+                    <div style="width:77%"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PERFORMANCE -->
+        <section class="report-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Security Performance</h2>
+                    <p>Overview of your current security areas</p>
+                </div>
+
+            </div>
+
+
+            <div class="performance-table">
+
+                <div class="table-row table-head">
+                    <span>Security Area</span>
+                    <span>Score</span>
+                    <span>Status</span>
+                </div>
+
+                <div class="table-row">
+                    <span>Cyber Health Assessment</span>
+                    <strong>82%</strong>
+                    <span class="good-status">Good</span>
+                </div>
+
+                <div class="table-row">
+                    <span>Phishing Protection</span>
+                    <strong>75%</strong>
+                    <span class="warning-status">Needs Improvement</span>
+                </div>
+
+                <div class="table-row">
+                    <span>Employee Awareness</span>
+                    <strong>77%</strong>
+                    <span class="good-status">Good</span>
+                </div>
+
+                <div class="table-row">
+                    <span>Overall Security</span>
+                    <strong>78%</strong>
+                    <span class="good-status">Good</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINDINGS -->
+        <section class="findings-grid">
+
+            <div class="finding-card">
+
+                <div class="finding-title">
+                    🔴
+                    <h3>Key Risks</h3>
+                </div>
+
+                <ul>
+                    <li>Phishing protection needs improvement</li>
+                    <li>MFA should be enabled</li>
+                    <li>Employee awareness training is pending</li>
+                </ul>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="finding-title">
+                    🟢
+                    <h3>Security Strengths</h3>
+                </div>
+
+                <ul>
+                    <li>Cyber health score is good</li>
+                    <li>Regular security assessment completed</li>
+                    <li>Backup practices are active</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTIONS -->
+        <section class="next-actions">
+
+            <div>
+
+                <span>🚀 Next Steps</span>
+
+                <h2>Improve Your Security Score</h2>
+
+                <p>
+                    Complete the recommended security actions
+                    and continue employee cybersecurity training.
+                </p>
+
+            </div>
+
+            <a href="recommendations.html">
+                View Recommendations →
+            </a>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="../js/api.js"></script>
+<script src="../js/reports.js"></script>
+
+</body>
+</html>

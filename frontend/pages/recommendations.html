@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recommendations | CyberGuard SME</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/recommendations.css">
+</head>
+
+<body>
+
+<div class="recommendation-page">
+
+    <!-- HEADER -->
+    <header class="recommendation-header">
+
+        <div class="rec-logo">
+            🛡️ CyberGuard SME
+        </div>
+
+        <a href="dashboard.html" class="back-dashboard">
+            ← Dashboard
+        </a>
+
+    </header>
+
+
+    <main class="recommendation-container">
+
+        <!-- TITLE -->
+        <section class="rec-title">
+
+            <span class="rec-badge">
+                💡 Security Guidance
+            </span>
+
+            <h1>Security Recommendations</h1>
+
+            <p>
+                Improve your organization's cybersecurity posture
+                with these recommended actions.
+            </p>
+
+        </section>
+
+
+        <!-- SECURITY SUMMARY -->
+        <section class="security-summary">
+
+            <div class="summary-card">
+
+                <div class="summary-icon">🛡️</div>
+
+                <div>
+                    <span>Cyber Health</span>
+                    <strong id="healthScore">78%</strong>
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="summary-icon">🔴</div>
+
+                <div>
+                    <span>High Priority</span>
+                    <strong id="highCount">2</strong>
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="summary-icon">🟡</div>
+
+                <div>
+                    <span>Medium Priority</span>
+                    <strong id="mediumCount">2</strong>
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="summary-icon">🟢</div>
+
+                <div>
+                    <span>Completed</span>
+                    <strong id="completedCount">0</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROGRESS -->
+        <section class="progress-card">
+
+            <div class="progress-heading">
+
+                <div>
+                    <h3>Security Improvement Progress</h3>
+                    <p>Complete recommended actions to improve your posture.</p>
+                </div>
+
+                <strong id="progressPercent">0%</strong>
+
+            </div>
+
+            <div class="progress-track">
+
+                <div
+                    class="progress-fill"
+                    id="progressFill">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RECOMMENDATIONS -->
+        <section>
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Recommended Actions</h2>
+                    <p>Prioritized actions for your organization</p>
+                </div>
+
+            </div>
+
+
+            <div class="recommendation-list" id="recommendationList">
+
+                <!-- HIGH PRIORITY -->
+
+                <div class="recommendation-card high">
+
+                    <div class="rec-icon">
+                        🔐
+                    </div>
+
+                    <div class="rec-content">
+
+                        <span class="priority high-label">
+                            HIGH PRIORITY
+                        </span>
+
+                        <h3>Enable Multi-Factor Authentication</h3>
+
+                        <p>
+                            Add an additional authentication factor
+                            to protect important business accounts.
+                        </p>
+
+                        <button onclick="completeRecommendation(this)">
+                            ✓ Mark as Completed
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="recommendation-card high">
+
+                    <div class="rec-icon">
+                        🎣
+                    </div>
+
+                    <div class="rec-content">
+
+                        <span class="priority high-label">
+                            HIGH PRIORITY
+                        </span>
+
+                        <h3>Complete Phishing Awareness Training</h3>
+
+                        <p>
+                            Train employees to recognize suspicious
+                            emails, links and social engineering attempts.
+                        </p>
+
+                        <button onclick="completeRecommendation(this)">
+                            ✓ Mark as Completed
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MEDIUM PRIORITY -->
+
+                <div class="recommendation-card medium">
+
+                    <div class="rec-icon">
+                        🔄
+                    </div>
+
+                    <div class="rec-content">
+
+                        <span class="priority medium-label">
+                            MEDIUM PRIORITY
+                        </span>
+
+                        <h3>Update Outdated Software</h3>
+
+                        <p>
+                            Keep operating systems and applications
+                            updated to reduce known security risks.
+                        </p>
+
+                        <button onclick="completeRecommendation(this)">
+                            ✓ Mark as Completed
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="recommendation-card medium">
+
+                    <div class="rec-icon">
+                        💾
+                    </div>
+
+                    <div class="rec-content">
+
+                        <span class="priority medium-label">
+                            MEDIUM PRIORITY
+                        </span>
+
+                        <h3>Review Backup Policy</h3>
+
+                        <p>
+                            Maintain regular backups of important
+                            business information and verify recovery.
+                        </p>
+
+                        <button onclick="completeRecommendation(this)">
+                            ✓ Mark as Completed
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GOOD PRACTICE -->
+
+                <div class="recommendation-card good">
+
+                    <div class="rec-icon">
+                        🛡️
+                    </div>
+
+                    <div class="rec-content">
+
+                        <span class="priority good-label">
+                            GOOD PRACTICE
+                        </span>
+
+                        <h3>Maintain Employee Security Awareness</h3>
+
+                        <p>
+                            Continue regular cybersecurity awareness
+                            training and security reviews.
+                        </p>
+
+                        <button onclick="completeRecommendation(this)">
+                            ✓ Mark as Completed
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOTTOM -->
+
+        <section class="rec-bottom">
+
+            <div>
+                <h2>Keep Your Business Protected 🛡️</h2>
+
+                <p>
+                    Regularly review your cybersecurity score,
+                    complete recommended actions and train employees.
+                </p>
+            </div>
+
+            <a href="dashboard.html">
+                View Dashboard →
+            </a>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/recommendations.js"></script>
+
+</body>
+</html>

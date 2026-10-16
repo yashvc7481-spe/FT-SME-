@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | CyberGuard SME</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+
+    <!-- =========================================
+         SIDEBAR
+    ========================================== -->
+
+    <aside class="sidebar">
+
+        <div class="side-logo">
+            <span>🛡️</span>
+            <strong>CyberGuard</strong>
+            <small>SME Security Platform</small>
+        </div>
+
+
+        <div class="menu-title">
+            MAIN MENU
+        </div>
+
+
+        <a class="active" href="dashboard.html">
+            <span>📊</span>
+            Dashboard
+        </a>
+
+        <a href="assessment.html">
+            <span>📝</span>
+            Cyber Assessment
+        </a>
+
+        <a href="phishing.html">
+            <span>🔍</span>
+            Phishing Checker
+        </a>
+
+        <a href="quiz.html">
+    🎓 Training & Quiz
+</a>
+
+       <a href="recommendations.html">
+    💡 Recommendations
+</a>
+
+        <a href="alerts.html">
+    🔔 Alerts
+</a>
+
+       <a href="reports.html">
+    📈 Reports
+</a>
+
+        <div class="menu-title">
+            ACCOUNT
+        </div>
+
+        <a href="profile.html">
+    👤 Profile
+</a>
+
+
+        <button onclick="logout()" class="logout">
+            <span>🚪</span>
+            Logout
+        </button>
+
+    </aside>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <span class="page-label">
+                    SECURITY OVERVIEW
+                </span>
+
+                <h1>
+                    Cyber Security Dashboard
+                </h1>
+
+                <p>
+                    Welcome back,
+                    <strong id="userName">User</strong> 👋
+                </p>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    System Protected
+                </div>
+
+                <div class="profile-mini">
+                    👤
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================================
+             WELCOME BANNER
+        ========================================== -->
+
+        <section class="welcome-banner">
+
+            <div>
+
+                <span class="banner-tag">
+                    🛡️ CYBERGUARD SME
+                </span>
+
+                <h2>
+                    Keep your business cyber-safe.
+                </h2>
+
+                <p>
+                    Monitor security health, detect phishing threats,
+                    train employees and follow recommended security actions.
+                </p>
+
+                <a href="assessment.html" class="banner-btn">
+                    Start Security Assessment →
+                </a>
+
+            </div>
+
+
+            <div class="banner-shield">
+                🛡️
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             CYBER HEALTH SCORE
+        ========================================== -->
+
+        <section class="overview-grid">
+
+
+            <!-- MAIN SCORE -->
+
+            <div class="health-card">
+
+                <div class="card-heading">
+
+                    <div>
+                        <span class="small-title">
+                            OVERALL SECURITY
+                        </span>
+
+                        <h2>
+                            Cyber Health Score
+                        </h2>
+                    </div>
+
+                    <span class="score-icon">
+                        🛡️
+                    </span>
+
+                </div>
+
+
+                <div class="health-content">
+
+                    <div class="score-circle">
+
+                        <div>
+
+                            <strong id="healthScore">
+                                78
+                            </strong>
+
+                            <span>
+                                /100
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="health-info">
+
+                        <span class="score-status">
+                            ● Good Security Posture
+                        </span>
+
+                        <p>
+                            Your organization has a good level of
+                            cybersecurity protection. Continue improving
+                            weak areas to reach an excellent security posture.
+                        </p>
+
+                        <a href="reports.html">
+                            View Security Report →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SECURITY STATUS -->
+
+            <div class="security-status">
+
+                <span class="small-title">
+                    SECURITY STATUS
+                </span>
+
+                <h2>
+                    Protection Overview
+                </h2>
+
+
+                <div class="status-row">
+
+                    <div class="status-icon green">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>Account Security</strong>
+                        <span>Good</span>
+                    </div>
+
+                </div>
+
+
+                <div class="status-row">
+
+                    <div class="status-icon yellow">
+                        !
+                    </div>
+
+                    <div>
+                        <strong>Phishing Protection</strong>
+                        <span>Needs Improvement</span>
+                    </div>
+
+                </div>
+
+
+                <div class="status-row">
+
+                    <div class="status-icon green">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>Employee Awareness</strong>
+                        <span>Good</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             MODULE STATISTICS
+        ========================================== -->
+
+        <section class="stats-grid">
+
+
+            <a href="assessment.html" class="stat-card blue">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon">
+                        📊
+                    </div>
+
+                    <span>Assessment</span>
+
+                </div>
+
+                <strong>
+                    82%
+                </strong>
+
+                <p>
+                    Security posture
+                </p>
+
+                <div class="progress">
+                    <span style="width:82%"></span>
+                </div>
+
+                <small>
+                    View assessment →
+                </small>
+
+            </a>
+
+
+
+            <a href="phishing.html" class="stat-card red">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon">
+                        🔍
+                    </div>
+
+                    <span>Phishing</span>
+
+                </div>
+
+                <strong>
+                    75%
+                </strong>
+
+                <p>
+                    Protection level
+                </p>
+
+                <div class="progress">
+                    <span style="width:75%"></span>
+                </div>
+
+                <small>
+                    Check suspicious URL →
+                </small>
+
+            </a>
+
+
+
+            <a href="training.html" class="stat-card purple">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon">
+                        🎓
+                    </div>
+
+                    <span>Training</span>
+
+                </div>
+
+                <strong>
+                    77%
+                </strong>
+
+                <p>
+                    Awareness score
+                </p>
+
+                <div class="progress">
+                    <span style="width:77%"></span>
+                </div>
+
+                <small>
+                    Continue training →
+                </small>
+
+            </a>
+
+
+
+            <a href="reports.html" class="stat-card green">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon">
+                        📈
+                    </div>
+
+                    <span>Reports</span>
+
+                </div>
+
+                <strong>
+                    12
+                </strong>
+
+                <p>
+                    Security activities
+                </p>
+
+                <div class="progress">
+                    <span style="width:65%"></span>
+                </div>
+
+                <small>
+                    View reports →
+                </small>
+
+            </a>
+
+        </section>
+
+
+
+        <!-- =========================================
+             LOWER GRID
+        ========================================== -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- SECURITY ALERTS -->
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="small-title">
+                            MONITORING
+                        </span>
+
+                        <h2>
+                            Recent Security Alerts
+                        </h2>
+
+                    </div>
+
+                    <a href="alerts.html">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="alert danger">
+
+                    <div class="alert-icon">
+                        🔴
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Suspicious phishing activity
+                        </strong>
+
+                        <p>
+                            A potentially malicious URL was detected.
+                        </p>
+
+                        <small>
+                            Recently
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="alert warning">
+
+                    <div class="alert-icon">
+                        🟡
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Software update recommended
+                        </strong>
+
+                        <p>
+                            Update outdated applications to reduce risk.
+                        </p>
+
+                        <small>
+                            Today
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="alert safe">
+
+                    <div class="alert-icon">
+                        🟢
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Backup completed
+                        </strong>
+
+                        <p>
+                            Your latest backup activity was successful.
+                        </p>
+
+                        <small>
+                            Yesterday
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RECOMMENDATIONS -->
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="small-title">
+                            IMPROVE SECURITY
+                        </span>
+
+                        <h2>
+                            Recommended Actions
+                        </h2>
+
+                    </div>
+
+                    <a href="recommendations.html">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="recommendation">
+
+                    <span>🔐</span>
+
+                    <div>
+
+                        <strong>
+                            Enable Multi-Factor Authentication
+                        </strong>
+
+                        <p>
+                            Protect accounts with an additional
+                            authentication layer.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="recommendation">
+
+                    <span>🔄</span>
+
+                    <div>
+
+                        <strong>
+                            Update outdated software
+                        </strong>
+
+                        <p>
+                            Keep operating systems and applications updated.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="recommendation">
+
+                    <span>🎓</span>
+
+                    <div>
+
+                        <strong>
+                            Complete awareness training
+                        </strong>
+
+                        <p>
+                            Improve employee phishing awareness.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="recommendation">
+
+                    <span>💾</span>
+
+                    <div>
+
+                        <strong>
+                            Review backup policy
+                        </strong>
+
+                        <p>
+                            Maintain reliable and regular backups.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             QUICK ACTIONS
+        ========================================== -->
+
+        <section class="quick-section">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="small-title">
+                        QUICK ACCESS
+                    </span>
+
+                    <h2>
+                        Security Tools
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="quick-grid">
+
+
+                <a href="assessment.html">
+
+                    <span>📝</span>
+
+                    <div>
+                        <strong>Assess Security</strong>
+                        <small>Evaluate cyber health</small>
+                    </div>
+
+                    →
+                </a>
+
+
+                <a href="phishing.html">
+
+                    <span>🔍</span>
+
+                    <div>
+                        <strong>Check Phishing</strong>
+                        <small>Analyze suspicious links</small>
+                    </div>
+
+                    →
+                </a>
+
+
+                <a href="training.html">
+
+                    <span>🎓</span>
+
+                    <div>
+                        <strong>Start Training</strong>
+                        <small>Improve awareness</small>
+                    </div>
+
+                    →
+                </a>
+
+
+                <a href="reports.html">
+
+                    <span>📊</span>
+
+                    <div>
+                        <strong>View Reports</strong>
+                        <small>Analyze security data</small>
+                    </div>
+
+                    →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer class="dashboard-footer">
+
+            <p>
+                🛡️ CyberGuard SME
+            </p>
+
+            <span>
+                Cybersecurity Awareness & Protection Platform © 2026
+            </span>
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+
+<script src="../js/api.js"></script>
+<script src="../js/dashboard.js"></script>
+</body>
+
+</html>

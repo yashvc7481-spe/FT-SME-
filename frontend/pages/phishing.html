@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Phishing Checker | CyberGuard SME</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/phishing.css">
+</head>
+
+<body>
+
+<div class="phishing-page">
+
+    <!-- HEADER -->
+    <header class="phishing-header">
+
+        <div class="phishing-logo">
+            🛡️ CyberGuard SME
+        </div>
+
+        <a href="dashboard.html" class="back-btn">
+            ← Dashboard
+        </a>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="phishing-container">
+
+        <div class="phishing-intro">
+
+            <span class="phishing-badge">
+                🔍 Threat Detection
+            </span>
+
+            <h1>Phishing Checker</h1>
+
+            <p>
+                Check suspicious website URLs and identify common
+                phishing indicators before opening them.
+            </p>
+
+        </div>
+
+
+        <!-- CHECKER CARD -->
+        <div class="checker-card">
+
+            <div class="checker-icon">
+                🔐
+            </div>
+
+            <h2>Check a Website</h2>
+
+            <p>
+                Enter a URL below to analyze common security red flags.
+            </p>
+
+            <form id="phishingForm">
+
+                <div class="url-input">
+
+                    <span>🌐</span>
+
+                    <input
+                        type="text"
+                        id="urlInput"
+                        placeholder="https://example.com"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit" class="check-btn">
+                    🔍 Analyze URL
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- RESULT -->
+        <div id="resultCard" class="result-card hidden">
+
+            <div id="resultIcon" class="result-icon">
+                🛡️
+            </div>
+
+            <h2 id="resultTitle">
+                Result
+            </h2>
+
+            <p id="resultMessage">
+                Analysis result
+            </p>
+
+            <div class="risk-score">
+
+                <span>Risk Level</span>
+
+                <strong id="riskLevel">
+                    -
+                </strong>
+
+            </div>
+
+            <div class="warning-list">
+
+                <h3>Security Indicators</h3>
+
+                <ul id="warningList"></ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- SAFETY TIPS -->
+        <section class="safety-section">
+
+            <h2>🛡️ Stay Safe Online</h2>
+
+            <div class="safety-grid">
+
+                <div class="safety-card">
+                    <span>🔗</span>
+                    <h3>Check the URL</h3>
+                    <p>Look carefully for unusual domains and spelling.</p>
+                </div>
+
+                <div class="safety-card">
+                    <span>🔒</span>
+                    <h3>Use HTTPS</h3>
+                    <p>Prefer secure HTTPS connections when browsing.</p>
+                </div>
+
+                <div class="safety-card">
+                    <span>⚠️</span>
+                    <h3>Be Careful</h3>
+                    <p>Avoid links from unknown or suspicious messages.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/phishing.js"></script>
+</body>
+</html>

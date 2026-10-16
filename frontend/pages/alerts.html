@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alerts | CyberGuard SME</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/alerts.css">
+</head>
+
+<body>
+
+<div class="alerts-page">
+
+    <!-- HEADER -->
+    <header class="alerts-header">
+
+        <div class="alerts-logo">
+            🛡️ CyberGuard SME
+        </div>
+
+        <a href="dashboard.html" class="back-dashboard">
+            ← Dashboard
+        </a>
+
+    </header>
+
+
+    <main class="alerts-container">
+
+        <!-- TITLE -->
+        <section class="alerts-title">
+
+            <span class="alerts-badge">
+                🔔 Security Monitoring
+            </span>
+
+            <h1>Security Alerts</h1>
+
+            <p>
+                Monitor important cybersecurity events and
+                recommended security actions.
+            </p>
+
+        </section>
+
+
+        <!-- SUMMARY -->
+        <section class="alert-summary">
+
+            <div class="summary-card critical-card">
+                <div class="summary-icon">🔴</div>
+                <div>
+                    <span>Critical</span>
+                    <strong id="criticalCount">1</strong>
+                </div>
+            </div>
+
+            <div class="summary-card high-card">
+                <div class="summary-icon">🟠</div>
+                <div>
+                    <span>High</span>
+                    <strong id="highCount">1</strong>
+                </div>
+            </div>
+
+            <div class="summary-card medium-card">
+                <div class="summary-icon">🟡</div>
+                <div>
+                    <span>Medium</span>
+                    <strong id="mediumCount">2</strong>
+                </div>
+            </div>
+
+            <div class="summary-card safe-card">
+                <div class="summary-icon">🟢</div>
+                <div>
+                    <span>Resolved</span>
+                    <strong id="resolvedCount">0</strong>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ACTION BAR -->
+        <div class="alert-actions">
+
+            <h2>Recent Alerts</h2>
+
+            <button onclick="markAllRead()">
+                ✓ Mark All as Read
+            </button>
+
+        </div>
+
+
+        <!-- ALERT LIST -->
+        <section class="alert-list" id="alertList">
+
+
+            <!-- CRITICAL -->
+            <div class="alert-item critical">
+
+                <div class="alert-icon">
+                    🔴
+                </div>
+
+                <div class="alert-content">
+
+                    <span class="alert-level">
+                        CRITICAL
+                    </span>
+
+                    <h3>Suspicious phishing activity detected</h3>
+
+                    <p>
+                        A suspicious phishing attempt was identified.
+                        Verify the sender and avoid opening unknown links.
+                    </p>
+
+                    <small>
+                        Today • Security Monitor
+                    </small>
+
+                </div>
+
+                <button
+                    class="read-btn"
+                    onclick="markRead(this)">
+                    Mark Read
+                </button>
+
+            </div>
+
+
+            <!-- HIGH -->
+            <div class="alert-item high">
+
+                <div class="alert-icon">
+                    🟠
+                </div>
+
+                <div class="alert-content">
+
+                    <span class="alert-level">
+                        HIGH
+                    </span>
+
+                    <h3>Multi-Factor Authentication is not enabled</h3>
+
+                    <p>
+                        Enable MFA for important business accounts
+                        to improve account protection.
+                    </p>
+
+                    <small>
+                        Today • Security Monitor
+                    </small>
+
+                </div>
+
+                <button
+                    class="read-btn"
+                    onclick="markRead(this)">
+                    Mark Read
+                </button>
+
+            </div>
+
+
+            <!-- MEDIUM -->
+            <div class="alert-item medium">
+
+                <div class="alert-icon">
+                    🟡
+                </div>
+
+                <div class="alert-content">
+
+                    <span class="alert-level">
+                        MEDIUM
+                    </span>
+
+                    <h3>Software updates recommended</h3>
+
+                    <p>
+                        Some software may require updates to reduce
+                        known security vulnerabilities.
+                    </p>
+
+                    <small>
+                        Yesterday • System Check
+                    </small>
+
+                </div>
+
+                <button
+                    class="read-btn"
+                    onclick="markRead(this)">
+                    Mark Read
+                </button>
+
+            </div>
+
+
+            <!-- MEDIUM -->
+            <div class="alert-item medium">
+
+                <div class="alert-icon">
+                    🟡
+                </div>
+
+                <div class="alert-content">
+
+                    <span class="alert-level">
+                        MEDIUM
+                    </span>
+
+                    <h3>Security awareness training pending</h3>
+
+                    <p>
+                        Complete the cybersecurity awareness quiz
+                        to improve employee security knowledge.
+                    </p>
+
+                    <small>
+                        2 days ago • Training
+                    </small>
+
+                </div>
+
+                <button
+                    class="read-btn"
+                    onclick="markRead(this)">
+                    Mark Read
+                </button>
+
+            </div>
+
+
+            <!-- SAFE -->
+            <div class="alert-item safe">
+
+                <div class="alert-icon">
+                    🟢
+                </div>
+
+                <div class="alert-content">
+
+                    <span class="alert-level">
+                        RESOLVED
+                    </span>
+
+                    <h3>Backup successfully completed</h3>
+
+                    <p>
+                        Your latest business data backup was
+                        completed successfully.
+                    </p>
+
+                    <small>
+                        3 days ago • Backup System
+                    </small>
+
+                </div>
+
+                <span class="resolved-label">
+                    ✓ Resolved
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECURITY TIP -->
+        <section class="security-tip">
+
+            <div class="tip-icon">
+                💡
+            </div>
+
+            <div>
+                <h3>Security Tip</h3>
+
+                <p>
+                    Never share passwords or sensitive information
+                    through suspicious emails or unknown links.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/alerts.js"></script>
+
+</body>
+</html>

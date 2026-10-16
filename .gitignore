@@ -1,0 +1,25 @@
+# Python & Environments
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local databases and logs
+*.db
+*.db-shm
+*.db-wal
+*.log
+.env
+.env.local
+
+# Node
+node_modules/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+*.backup*

@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: cyberguard-sme-backend
+    env: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --workers=2 --threads=4 --timeout=120 --bind=0.0.0.0:$PORT "app:app"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: APP_SECRET
+        generateValue: true
+      - key: FRONTEND_ORIGIN
+        value: "*"

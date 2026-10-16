@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Training & Quiz | CyberGuard SME</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/training.css">
+</head>
+
+<body>
+
+<div class="quiz-page">
+
+    <!-- HEADER -->
+    <header class="quiz-header">
+
+        <div class="quiz-logo">
+            🛡️ CyberGuard SME
+        </div>
+
+        <a href="dashboard.html" class="back-btn">
+            ← Dashboard
+        </a>
+
+    </header>
+
+
+    <main class="quiz-container">
+
+        <!-- INTRO -->
+        <section class="quiz-intro" id="quizIntro">
+
+            <span class="quiz-badge">
+                🎓 Cybersecurity Awareness
+            </span>
+
+            <h1>Training & Quiz</h1>
+
+            <p>
+                Test your cybersecurity knowledge and improve
+                your organization's security awareness.
+            </p>
+
+            <div class="topic-grid">
+
+                <div class="topic-card">
+                    🎣
+                    <h3>Phishing</h3>
+                    <p>Identify suspicious messages.</p>
+                </div>
+
+                <div class="topic-card">
+                    🔐
+                    <h3>Passwords</h3>
+                    <p>Learn secure password practices.</p>
+                </div>
+
+                <div class="topic-card">
+                    🦠
+                    <h3>Malware</h3>
+                    <p>Understand common cyber threats.</p>
+                </div>
+
+                <div class="topic-card">
+                    💾
+                    <h3>Backups</h3>
+                    <p>Protect important business data.</p>
+                </div>
+
+            </div>
+
+            <button class="start-btn" onclick="startQuiz()">
+                🚀 Start Quiz
+            </button>
+
+        </section>
+
+
+        <!-- QUIZ -->
+        <section class="quiz-box hidden" id="quizBox">
+
+            <div class="quiz-top">
+
+                <span id="questionNumber">
+                    Question 1 of 20
+                </span>
+
+                <span id="currentScore">
+                    Score: 0
+                </span>
+
+            </div>
+
+
+            <div class="progress-container">
+
+                <div
+                    class="progress-bar"
+                    id="progressBar">
+                </div>
+
+            </div>
+
+
+            <div class="question-card">
+
+                <span class="question-topic" id="questionTopic">
+                    Phishing
+                </span>
+
+                <h2 id="questionText">
+                    Question goes here
+                </h2>
+
+                <div id="optionsContainer"
+                     class="options-container">
+                </div>
+
+            </div>
+
+
+            <div id="feedback"
+                 class="feedback hidden">
+            </div>
+
+
+            <button
+                id="nextBtn"
+                class="next-btn"
+                onclick="nextQuestion()"
+                disabled>
+
+                Next Question →
+            </button>
+
+        </section>
+
+
+        <!-- RESULT -->
+        <section class="quiz-result hidden" id="quizResult">
+
+            <div class="trophy">
+                🏆
+            </div>
+
+            <h1>Quiz Completed!</h1>
+
+            <p>Great job! Here is your cybersecurity awareness result.</p>
+
+
+            <div class="final-score">
+
+                <span id="finalScore">
+                    0%
+                </span>
+
+                <small>
+                    Your Score
+                </small>
+
+            </div>
+
+
+            <h2 id="badgeTitle">
+                Cybersecurity Learner
+            </h2>
+
+            <p id="badgeMessage">
+                Keep learning and improving your security awareness.
+            </p>
+
+
+            <div class="result-stats">
+
+                <div>
+                    <strong id="correctAnswers">0</strong>
+                    <span>Correct</span>
+                </div>
+
+                <div>
+                    <strong id="wrongAnswers">0</strong>
+                    <span>Wrong</span>
+                </div>
+
+                <div>
+                    <strong>20</strong>
+                    <span>Total</span>
+                </div>
+
+            </div>
+
+
+            <div class="result-buttons">
+
+                <button
+                    class="start-btn"
+                    onclick="restartQuiz()">
+
+                    🔄 Retake Quiz
+
+                </button>
+
+                <a
+                    href="dashboard.html"
+                    class="dashboard-btn">
+
+                    📊 Dashboard
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/quiz.js"></script>
+
+</body>

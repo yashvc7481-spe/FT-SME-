@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | CyberGuard SME</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
+
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-card">
+
+        <div class="auth-logo">
+            🛡️
+        </div>
+
+        <h1>Create Account</h1>
+
+        <p>Start improving your cybersecurity</p>
+
+
+        <form id="registerForm">
+
+            <label>Full Name</label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your full name"
+                required
+            >
+
+
+            <label>Email</label>
+
+            <input
+                type="email"
+                id="regEmail"
+                placeholder="Enter your email"
+                required
+            >
+
+
+            <label>Company Name</label>
+
+            <input
+                type="text"
+                id="company"
+                placeholder="Enter company name"
+                required
+            >
+
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                id="regPassword"
+                placeholder="Create password"
+                minlength="6"
+                required
+            >
+
+
+            <label>Confirm Password</label>
+
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm password"
+                minlength="6"
+                required
+            >
+
+
+            <button
+                type="submit"
+                class="auth-btn">
+                Create Account
+            </button>
+
+        </form>
+
+
+        <p class="switch">
+
+            Already have an account?
+
+            <a href="login.html">
+                Login
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+
+<script src="../js/api.js"></script>
+<script>
+document.getElementById("registerForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("regEmail").value.trim();
+    const company = document.getElementById("company").value.trim();
+    const password = document.getElementById("regPassword").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+
+    /* Password validation */
+    if (password.length < 8) {
+        alert("Password must contain at least 8 characters.");
+        return;
+    }
+
+    /* Confirm password */
+    if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+    }
+
+    try {
+        const res = await API.register(name, email, password, company);
+        if (res.success) {
+            localStorage.setItem("userName", name);
+            localStorage.setItem("userEmail", email);
+            localStorage.setItem("companyName", company);
+            localStorage.setItem("isLoggedIn", "true");
+            alert("Account created successfully!");
+            window.location.href = "login.html";
+        } else {
+            alert(res.message || "Registration failed.");
+        }
+    } catch (err) {
+        console.warn("API registration failed, using local storage fallback:", err);
+        // Fallback demo storage
+        const user = { name, email, company, password };
+        localStorage.setItem("cyberGuardUser", JSON.stringify(user));
+        localStorage.setItem("userName", name);
+        localStorage.setItem("userEmail", email);
+        localStorage.setItem("companyName", company);
+        alert(err.message || "Account created successfully!");
+        window.location.href = "login.html";
+    }
+});
+</script>
+</body>
+
+</html>

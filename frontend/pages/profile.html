@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | CyberGuard SME</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+
+<body>
+
+<div class="profile-page">
+
+    <!-- HEADER -->
+    <header class="profile-header">
+
+        <div class="profile-logo">
+            🛡️ CyberGuard SME
+        </div>
+
+        <a href="dashboard.html">
+            ← Dashboard
+        </a>
+
+    </header>
+
+
+    <main class="profile-container">
+
+        <!-- TITLE -->
+        <section class="profile-title">
+
+            <span>👤 Account Management</span>
+
+            <h1>My Profile</h1>
+
+            <p>
+                Manage your account information and
+                monitor your cybersecurity activity.
+            </p>
+
+        </section>
+
+
+        <!-- PROFILE CARD -->
+        <section class="profile-main-card">
+
+            <div class="avatar" id="avatar">
+                U
+            </div>
+
+            <div class="profile-basic">
+
+                <h2 id="displayName">
+                    User
+                </h2>
+
+                <p id="displayEmail">
+                    user@example.com
+                </p>
+
+                <span class="account-badge">
+                    🛡️ SME Account
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- INFORMATION -->
+        <section class="profile-grid">
+
+            <div class="profile-card">
+
+                <h2>Personal Information</h2>
+
+                <div class="info-row">
+
+                    <span>Full Name</span>
+
+                    <strong id="nameInfo">
+                        User
+                    </strong>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span>Email</span>
+
+                    <strong id="emailInfo">
+                        user@example.com
+                    </strong>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span>Company</span>
+
+                    <strong id="companyInfo">
+                        My Company
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- SECURITY -->
+            <div class="profile-card">
+
+                <h2>Security Overview</h2>
+
+                <div class="security-score">
+
+                    <div>
+                        <span>Cyber Health</span>
+                        <strong>78%</strong>
+                    </div>
+
+                    <span class="good">
+                        Good
+                    </span>
+
+                </div>
+
+
+                <div class="security-item">
+                    🔐 Account Protection
+                    <strong>Good</strong>
+                </div>
+
+                <div class="security-item">
+                    🎣 Phishing Awareness
+                    <strong>75%</strong>
+                </div>
+
+                <div class="security-item">
+                    🎓 Training Progress
+                    <strong>77%</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTIVITY -->
+        <section class="activity-card">
+
+            <h2>Security Activity</h2>
+
+            <div class="activity-grid">
+
+                <div>
+                    <span>📊</span>
+                    <strong>Assessment</strong>
+                    <small>Completed</small>
+                </div>
+
+                <div>
+                    <span>🔍</span>
+                    <strong>Phishing Checks</strong>
+                    <small>Active</small>
+                </div>
+
+                <div>
+                    <span>🎓</span>
+                    <strong>Training</strong>
+                    <small>In Progress</small>
+                </div>
+
+                <div>
+                    <span>🔔</span>
+                    <strong>Alerts</strong>
+                    <small>Monitoring</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTIONS -->
+        <section class="profile-actions">
+
+            <a href="dashboard.html" class="secondary-btn">
+                ← Back to Dashboard
+            </a>
+
+            <button onclick="logout()" class="logout-btn">
+                🚪 Logout
+            </button>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="../js/api.js"></script>
+<script src="../js/profile.js"></script>
+
+</body>
+</html>

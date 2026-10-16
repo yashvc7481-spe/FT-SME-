@@ -1,0 +1,340 @@
+/* =====================================
+   PHISHING CHECKER
+===================================== */
+
+.phishing-page {
+    min-height: 100vh;
+    background: #f5f7fb;
+}
+
+
+/* HEADER */
+
+.phishing-header {
+    height: 70px;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.phishing-logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #172033;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+
+/* MAIN */
+
+.phishing-container {
+    width: 90%;
+    max-width: 950px;
+
+    margin: 45px auto;
+}
+
+
+/* INTRO */
+
+.phishing-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.phishing-badge {
+    display: inline-block;
+
+    padding: 8px 16px;
+
+    background: #e8f0ff;
+    color: #2563eb;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.phishing-intro h1 {
+    font-size: 40px;
+
+    margin: 18px 0 10px;
+
+    color: #172033;
+}
+
+.phishing-intro p {
+    color: #64748b;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    line-height: 1.6;
+}
+
+
+/* CHECKER */
+
+.checker-card {
+    background: white;
+
+    padding: 35px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+}
+
+.checker-icon {
+    font-size: 50px;
+}
+
+.checker-card h2 {
+    margin: 10px 0;
+
+    color: #172033;
+}
+
+.checker-card p {
+    color: #64748b;
+}
+
+
+/* INPUT */
+
+.url-input {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: #f8fafc;
+
+    border: 1px solid #dbe2ea;
+
+    border-radius: 12px;
+
+    padding: 5px 15px;
+
+    margin-top: 25px;
+}
+
+.url-input input {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    padding: 14px;
+
+    font-size: 15px;
+}
+
+
+/* BUTTON */
+
+.check-btn {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.check-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+/* RESULT */
+
+.result-card {
+    margin-top: 25px;
+
+    background: white;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+}
+
+.hidden {
+    display: none;
+}
+
+.result-icon {
+    font-size: 55px;
+}
+
+.result-card h2 {
+    margin: 12px 0;
+
+    color: #172033;
+}
+
+.result-card p {
+    color: #64748b;
+}
+
+
+/* RISK */
+
+.risk-score {
+    margin: 25px auto;
+
+    max-width: 350px;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    background: #f8fafc;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.risk-score strong {
+    color: #2563eb;
+}
+
+
+/* WARNINGS */
+
+.warning-list {
+    text-align: left;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.warning-list h3 {
+    color: #172033;
+}
+
+.warning-list li {
+    padding: 10px;
+
+    margin-top: 8px;
+
+    background: #f8fafc;
+
+    border-radius: 8px;
+
+    color: #475569;
+}
+
+
+/* SAFETY */
+
+.safety-section {
+    margin-top: 40px;
+
+    text-align: center;
+}
+
+.safety-section h2 {
+    color: #172033;
+}
+
+.safety-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-top: 20px;
+}
+
+.safety-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+
+    transition: 0.2s;
+}
+
+.safety-card:hover {
+    transform: translateY(-5px);
+}
+
+.safety-card span {
+    font-size: 30px;
+}
+
+.safety-card h3 {
+    color: #172033;
+}
+
+.safety-card p {
+    color: #64748b;
+
+    line-height: 1.5;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .phishing-intro h1 {
+        font-size: 30px;
+    }
+
+    .safety-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .checker-card {
+        padding: 25px 18px;
+    }
+}

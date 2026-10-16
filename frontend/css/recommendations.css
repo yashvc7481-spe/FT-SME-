@@ -1,0 +1,415 @@
+/* =====================================
+   RECOMMENDATIONS PAGE
+===================================== */
+
+.recommendation-page {
+    min-height: 100vh;
+    background: #f5f7fb;
+}
+
+
+/* HEADER */
+
+.recommendation-header {
+    height: 70px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.rec-logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #172033;
+}
+
+.back-dashboard {
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+
+/* CONTAINER */
+
+.recommendation-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 45px auto;
+}
+
+
+/* TITLE */
+
+.rec-title {
+    margin-bottom: 30px;
+}
+
+.rec-badge {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.rec-title h1 {
+    font-size: 38px;
+    margin: 15px 0 8px;
+    color: #172033;
+}
+
+.rec-title p {
+    color: #64748b;
+}
+
+
+/* SUMMARY */
+
+.security-summary {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.summary-card {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.summary-icon {
+    font-size: 28px;
+}
+
+.summary-card span {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.summary-card strong {
+    display: block;
+
+    font-size: 25px;
+
+    margin-top: 3px;
+
+    color: #172033;
+}
+
+
+/* PROGRESS */
+
+.progress-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    margin-bottom: 35px;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.progress-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.progress-heading h3 {
+    margin: 0;
+}
+
+.progress-heading p {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.progress-heading strong {
+    color: #2563eb;
+    font-size: 25px;
+}
+
+.progress-track {
+    height: 10px;
+
+    background: #e2e8f0;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+
+    height: 100%;
+
+    background: #2563eb;
+
+    transition: width 0.4s ease;
+}
+
+
+/* SECTION */
+
+.section-heading {
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    margin-bottom: 5px;
+}
+
+.section-heading p {
+    color: #64748b;
+}
+
+
+/* RECOMMENDATION LIST */
+
+.recommendation-list {
+    display: grid;
+
+    gap: 15px;
+}
+
+
+/* CARD */
+
+.recommendation-card {
+    background: white;
+
+    padding: 23px;
+
+    border-radius: 16px;
+
+    display: flex;
+
+    gap: 20px;
+
+    border-left: 5px solid;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+
+    transition: 0.2s;
+}
+
+.recommendation-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+.recommendation-card.high {
+    border-color: #dc2626;
+}
+
+.recommendation-card.medium {
+    border-color: #f59e0b;
+}
+
+.recommendation-card.good {
+    border-color: #16a34a;
+}
+
+
+/* ICON */
+
+.rec-icon {
+    font-size: 35px;
+
+    min-width: 50px;
+
+    text-align: center;
+}
+
+
+/* CONTENT */
+
+.rec-content {
+    flex: 1;
+}
+
+.priority {
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+.high-label {
+    color: #dc2626;
+}
+
+.medium-label {
+    color: #d97706;
+}
+
+.good-label {
+    color: #16a34a;
+}
+
+.rec-content h3 {
+    margin: 7px 0;
+
+    color: #172033;
+}
+
+.rec-content p {
+    color: #64748b;
+
+    line-height: 1.5;
+
+    margin-bottom: 15px;
+}
+
+
+/* ACTION BUTTON */
+
+.rec-content button {
+    border: none;
+
+    padding: 9px 14px;
+
+    border-radius: 8px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.rec-content button:hover {
+    background: #2563eb;
+
+    color: white;
+}
+
+
+/* COMPLETED */
+
+.recommendation-card.completed {
+    opacity: 0.55;
+
+    border-color: #16a34a;
+}
+
+.recommendation-card.completed button {
+    background: #dcfce7;
+
+    color: #166534;
+}
+
+
+/* BOTTOM */
+
+.rec-bottom {
+    margin-top: 35px;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    background: #172033;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.rec-bottom h2 {
+    margin-top: 0;
+}
+
+.rec-bottom p {
+    color: #cbd5e1;
+}
+
+.rec-bottom a {
+    text-decoration: none;
+
+    background: white;
+
+    color: #2563eb;
+
+    padding: 12px 18px;
+
+    border-radius: 9px;
+
+    font-weight: 700;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .security-summary {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .rec-title h1 {
+        font-size: 30px;
+    }
+
+    .rec-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .security-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .recommendation-card {
+        padding: 18px;
+    }
+
+}

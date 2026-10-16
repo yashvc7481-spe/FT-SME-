@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cyber Health Assessment | CyberGuard SME</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/assessment.css">
+</head>
+
+<body>
+
+<div class="assessment-page">
+
+    <!-- HEADER -->
+
+    <header class="assessment-header">
+
+        <div class="assessment-logo">
+            🛡️ CyberGuard SME
+        </div>
+
+        <a href="dashboard.html" class="back-btn">
+            ← Dashboard
+        </a>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="assessment-container">
+
+        <div class="assessment-intro">
+
+            <span class="assessment-badge">
+                🔐 Security Assessment
+            </span>
+
+            <h1>Cyber Health Assessment</h1>
+
+            <p>
+                Evaluate your organization's cybersecurity practices
+                and identify areas that need improvement.
+            </p>
+
+        </div>
+
+
+        <!-- PROGRESS -->
+
+        <div class="progress-box">
+
+            <div class="progress-info">
+                <span>Assessment Progress</span>
+                <strong id="progressText">0 / 10</strong>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+
+        </div>
+
+
+        <!-- QUESTIONS -->
+
+        <form id="assessmentForm">
+
+            <div id="questionsContainer"></div>
+
+            <button type="submit" class="submit-btn">
+                Submit Assessment →
+            </button>
+
+        </form>
+
+    </main>
+
+</div>
+
+
+<script src="../js/api.js"></script>
+<script src="../js/assessment.js"></script>
+</body>
+</html>

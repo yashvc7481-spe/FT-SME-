@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Assessment Result | CyberGuard SME</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/result.css">
+</head>
+
+<body>
+
+<div class="result-page">
+
+    <!-- HEADER -->
+    <header class="result-header">
+
+        <div class="result-logo">
+            🛡️ CyberGuard SME
+        </div>
+
+        <a href="dashboard.html" class="dashboard-link">
+            ← Dashboard
+        </a>
+
+    </header>
+
+
+    <!-- RESULT CONTENT -->
+    <main class="result-container">
+
+        <div class="result-title">
+
+            <span class="result-badge">
+                ✓ Assessment Completed
+            </span>
+
+            <h1>Your Cyber Health Result</h1>
+
+            <p>
+                Here is an overview of your organization's
+                cybersecurity posture.
+            </p>
+
+        </div>
+
+
+        <!-- SCORE CARD -->
+        <div class="score-card">
+
+            <div class="score-circle">
+
+                <div>
+                    <span id="score">0%</span>
+                    <small>Cyber Health</small>
+                </div>
+
+            </div>
+
+            <h2 id="status">Calculating...</h2>
+
+            <p id="description">
+                Analyzing your security posture...
+            </p>
+
+        </div>
+
+
+        <!-- INSIGHTS -->
+        <div class="insights">
+
+            <div class="insight-card strength">
+
+                <div class="insight-icon">
+                    🛡️
+                </div>
+
+                <div>
+                    <h3>Security Strength</h3>
+
+                    <p id="strengthText">
+                        Your security practices are being evaluated.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="insight-card improvement">
+
+                <div class="insight-icon">
+                    ⚠️
+                </div>
+
+                <div>
+                    <h3>Areas to Improve</h3>
+
+                    <p id="improvementText">
+                        Review the recommendations below.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RECOMMENDATIONS -->
+        <div class="recommendation-box">
+
+            <h2>💡 Recommended Actions</h2>
+
+            <div id="recommendations"></div>
+
+        </div>
+
+
+        <!-- BUTTONS -->
+        <div class="result-actions">
+
+            <a href="dashboard.html" class="primary-btn">
+                📊 Go to Dashboard
+            </a>
+
+            <a href="assessment.html" class="secondary-btn">
+                🔄 Retake Assessment
+            </a>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="../js/api.js"></script>
+<script src="../js/result.js"></script>
+
+</body>
+</html>
