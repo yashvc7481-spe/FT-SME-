@@ -10,7 +10,7 @@ const API_BASE_URL =
     || localStorage.getItem("cyberGuardApiUrl")
     || ((window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")
         ? "http://127.0.0.1:5000/api"
-        : "/api");
+        : "https://cyberguard-backend-do37.onrender.com/api");
 
 const API = {
     getToken() {
