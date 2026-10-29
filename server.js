@@ -26,7 +26,11 @@ const server = http.createServer((req, res) => {
         requestPath = "/index.html";
     }
 
-    const filePath = path.join(frontendPath, requestPath);
+    let filePath = path.join(frontendPath, requestPath);
+
+    if (!path.extname(filePath) && fs.existsSync(filePath + ".html")) {
+        filePath = filePath + ".html";
+    }
 
     fs.readFile(filePath, (error, content) => {
 

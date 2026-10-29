@@ -8,6 +8,10 @@
       "destination": "https://cyberguard-backend-do37.onrender.com/api/$1"
     },
     {
+      "source": "/pages/(.*)",
+      "destination": "/frontend/pages/$1.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/frontend/$1"
     }
