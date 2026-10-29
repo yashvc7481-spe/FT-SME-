@@ -1,0 +1,687 @@
+/* =============================================
+   GOV HELP CENTER — SCOPED STYLES
+   All selectors are prefixed with .gov-help- or
+   .gh- to avoid affecting any other page.
+   ============================================= */
+
+/* ---- PAGE WRAPPER ---- */
+.gov-help-page {
+    min-height: 100vh;
+    background: #f5f7fb;
+}
+
+/* ---- HEADER ---- */
+.gov-help-header {
+    height: 70px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.gov-help-logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #172033;
+    text-decoration: none;
+}
+
+.gov-help-back {
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.gov-help-back:hover {
+    color: #1d4ed8;
+}
+
+/* ---- MAIN CONTAINER ---- */
+.gov-help-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 45px auto 60px;
+}
+
+/* ---- HERO SECTION ---- */
+.gov-help-hero {
+    background: linear-gradient(120deg, #1d4ed8, #2563eb, #3b82f6);
+    border-radius: 22px;
+    padding: 45px 50px;
+    color: white;
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.22);
+}
+
+.gov-help-hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.gov-help-hero-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
+}
+
+.gov-help-hero h1 {
+    font-size: 34px;
+    margin: 0 0 14px;
+    line-height: 1.2;
+}
+
+.gov-help-hero p {
+    color: #dbeafe;
+    line-height: 1.7;
+    font-size: 15px;
+    margin: 0;
+    max-width: 620px;
+}
+
+.gov-help-hero-icon {
+    font-size: 110px;
+    opacity: 0.12;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%) rotate(10deg);
+}
+
+/* ---- DISCLAIMER BANNER ---- */
+.gov-help-disclaimer {
+    background: #fffbeb;
+    border: 1px solid #fef3c7;
+    border-left: 5px solid #f59e0b;
+    border-radius: 12px;
+    padding: 16px 22px;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    font-size: 13px;
+    color: #92400e;
+    line-height: 1.6;
+}
+
+.gov-help-disclaimer-icon {
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.gov-help-disclaimer strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: #78350f;
+}
+
+/* ---- TOOLBAR: SEARCH + FILTERS ---- */
+.gov-help-toolbar {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.gov-help-search-wrap {
+    position: relative;
+    flex: 1;
+    min-width: 220px;
+}
+
+.gov-help-search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-style: normal;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+#govHelpSearch {
+    width: 100%;
+    padding: 12px 14px 12px 42px;
+    border: 1px solid #dbe2ea;
+    border-radius: 10px;
+    background: white;
+    font-size: 14px;
+    color: #172033;
+    outline: none;
+    transition: 0.25s ease;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#govHelpSearch:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+#govHelpSearch::placeholder {
+    color: #94a3b8;
+}
+
+/* ---- FILTER PILLS ---- */
+.gov-help-filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.gh-filter-btn {
+    padding: 9px 15px;
+    border-radius: 50px;
+    border: 1px solid #dbe2ea;
+    background: white;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+}
+
+.gh-filter-btn:hover {
+    border-color: #93c5fd;
+    color: #2563eb;
+    background: #f0f7ff;
+}
+
+.gh-filter-btn.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+/* ---- SECTION LABEL ---- */
+.gov-help-section-label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    color: #2563eb;
+    margin-bottom: 16px;
+    display: block;
+}
+
+/* ---- NO RESULTS MESSAGE ---- */
+.gov-help-no-results {
+    display: none;
+    text-align: center;
+    padding: 60px 20px;
+    color: #64748b;
+}
+
+.gov-help-no-results span {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 14px;
+}
+
+/* ---- CONTACT CARDS GRID ---- */
+.gov-help-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* ---- CONTACT CARD ---- */
+.gh-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    transition: 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.gh-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+}
+
+.gh-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border-radius: 18px 18px 0 0;
+    background: #2563eb;
+}
+
+.gh-card.cat-financial::before   { background: #f59e0b; }
+.gh-card.cat-incident::before    { background: #8b5cf6; }
+.gh-card.cat-emergency::before   { background: #ef4444; }
+.gh-card.cat-awareness::before   { background: #10b981; }
+.gh-card.cat-reporting::before   { background: #2563eb; }
+
+/* ---- CARD TOP ---- */
+.gh-card-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 14px;
+}
+
+.gh-card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+    background: #eff6ff;
+}
+
+.gh-card.cat-financial .gh-card-icon { background: #fffbeb; }
+.gh-card.cat-incident  .gh-card-icon { background: #f5f3ff; }
+.gh-card.cat-emergency .gh-card-icon { background: #fef2f2; }
+.gh-card.cat-awareness .gh-card-icon { background: #ecfdf5; }
+
+.gh-card-category {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    color: #2563eb;
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.gh-card.cat-financial  .gh-card-category { color: #d97706; }
+.gh-card.cat-incident   .gh-card-category { color: #7c3aed; }
+.gh-card.cat-emergency  .gh-card-category { color: #dc2626; }
+.gh-card.cat-awareness  .gh-card-category { color: #059669; }
+
+.gh-card-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #172033;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* ---- CARD BODY ---- */
+.gh-card-purpose {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.65;
+    margin: 0 0 16px;
+}
+
+.gh-card-when {
+    font-size: 12px;
+    color: #475569;
+    line-height: 1.6;
+    background: #f8fafc;
+    border-radius: 9px;
+    padding: 10px 13px;
+    margin-bottom: 16px;
+    border-left: 3px solid #cbd5e1;
+}
+
+.gh-card-when strong {
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+/* ---- CONTACT DETAILS ---- */
+.gh-card-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.gh-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: #172033;
+}
+
+.gh-contact-icon {
+    font-size: 15px;
+    width: 22px;
+    text-align: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.gh-contact-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+    display: block;
+    text-transform: uppercase;
+}
+
+a.gh-tel-link {
+    color: #172033;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    transition: color 0.2s;
+    display: block;
+}
+
+a.gh-tel-link:hover {
+    color: #2563eb;
+}
+
+a.gh-mail-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.2s;
+    display: block;
+    word-break: break-all;
+}
+
+a.gh-mail-link:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+a.gh-web-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: color 0.2s;
+    display: block;
+    word-break: break-all;
+}
+
+a.gh-web-link:hover {
+    text-decoration: underline;
+}
+
+/* ---- CARD ACTIONS ---- */
+.gh-card-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: 8px;
+}
+
+.gh-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 16px;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gh-btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    color: white;
+}
+
+.gh-card.cat-financial  .gh-btn-primary { background: #d97706; }
+.gh-card.cat-financial  .gh-btn-primary:hover { background: #b45309; }
+.gh-card.cat-incident   .gh-btn-primary { background: #7c3aed; }
+.gh-card.cat-incident   .gh-btn-primary:hover { background: #6d28d9; }
+.gh-card.cat-emergency  .gh-btn-primary { background: #dc2626; }
+.gh-card.cat-emergency  .gh-btn-primary:hover { background: #b91c1c; }
+.gh-card.cat-awareness  .gh-btn-primary { background: #059669; }
+.gh-card.cat-awareness  .gh-btn-primary:hover { background: #047857; }
+
+.gh-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 16px;
+    border-radius: 9px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid #dbeafe;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gh-btn-secondary:hover {
+    background: #dbeafe;
+    color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* ---- EMERGENCY CALLOUT ---- */
+.gov-help-emergency-note {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-left: 5px solid #ef4444;
+    border-radius: 12px;
+    padding: 16px 22px;
+    margin-bottom: 32px;
+    font-size: 13px;
+    color: #7f1d1d;
+    line-height: 1.65;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.gov-help-emergency-note strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #991b1b;
+}
+
+/* ---- INCIDENT RESPONSE SECTION ---- */
+.gov-help-incident-section {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 36px 40px;
+    margin-bottom: 35px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.gov-help-incident-section h2 {
+    font-size: 24px;
+    color: #172033;
+    margin: 0 0 8px;
+}
+
+.gov-help-incident-section > p {
+    color: #64748b;
+    margin: 0 0 28px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.gh-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.gh-step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 16px 18px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    transition: 0.2s;
+}
+
+.gh-step:hover {
+    border-color: #93c5fd;
+    background: #f0f7ff;
+}
+
+.gh-step-num {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.gh-step-text {
+    font-size: 14px;
+    color: #172033;
+    line-height: 1.65;
+    padding-top: 5px;
+}
+
+.gh-step-text strong {
+    color: #1d4ed8;
+}
+
+/* ---- BOTTOM DISCLAIMER ---- */
+.gov-help-bottom-disclaimer {
+    background: #172033;
+    color: white;
+    border-radius: 18px;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.gov-help-bottom-disclaimer p {
+    color: #cbd5e1;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 700px;
+}
+
+.gov-help-bottom-disclaimer strong {
+    display: block;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.gov-help-bottom-disclaimer a {
+    text-decoration: none;
+    background: white;
+    color: #2563eb;
+    padding: 11px 18px;
+    border-radius: 9px;
+    font-weight: 700;
+    font-size: 13px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: 0.2s;
+}
+
+.gov-help-bottom-disclaimer a:hover {
+    background: #dbeafe;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 900px) {
+    .gov-help-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gov-help-hero {
+        padding: 35px 30px;
+    }
+
+    .gov-help-hero h1 {
+        font-size: 26px;
+    }
+
+    .gov-help-incident-section {
+        padding: 28px 24px;
+    }
+
+    .gov-help-bottom-disclaimer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 26px;
+    }
+}
+
+@media (max-width: 640px) {
+    .gov-help-toolbar {
+        flex-direction: column;
+    }
+
+    .gov-help-hero h1 {
+        font-size: 22px;
+    }
+
+    .gov-help-hero {
+        padding: 28px 22px;
+    }
+
+    .gov-help-container {
+        width: 95%;
+        margin-top: 28px;
+    }
+
+    .gov-help-header {
+        padding: 0 5%;
+    }
+}
